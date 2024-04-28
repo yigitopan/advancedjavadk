@@ -5,13 +5,15 @@ public class TestClass {
 	public static void main(String args[]){  
 		//Insan obje= new Insan(182,95);  
 		Bina obje = new Bina();
+		Insan insan = new Insan(182,95);
+		System.out.println(insan.boyMetre());
 		System.out.println(obje.boyMetre());  
 		System.out.println(obje.boySantimetre());
 		System.out.println(obje.boyKilometre());
 	}
 }
 
-interface Boy{  
+interface Boy {
 	int degisken = 0;
 	static String tanim() {
 		return "Bu interface implement eden class icin "
@@ -24,17 +26,16 @@ interface Boy{
 	}
 }  
 
-
-abstract class Hayvan implements Boy{
+abstract class Hayvan implements Boy {
 	private int boy;
 	private int kilo;
 	public abstract boolean canliMi();
 	
-	
+
 	public int boySantimetre() {
 		return this.getBoy();
 	}
-	
+
 	public int getBoy() {
 		return boy;
 	}
@@ -60,8 +61,7 @@ class Insan extends Hayvan{
 
 	public boolean canliMi(){
 		return true;
-	}  
-
+	}
 	
 	public double boyMetre() {
 		return this.getBoy()/100.0;
