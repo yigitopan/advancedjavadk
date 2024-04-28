@@ -14,7 +14,7 @@ public class ConcurrentTasks {
 	public static void main(String[] args) {
 		
 		
-		Runnable run = () -> System.out.println("Ben bir runnable programım");
+		Runnable run = () -> System.out.println("Ben bir runnable programï¿½m");
 		Thread t = new Thread(run);
 		t.start();
 		

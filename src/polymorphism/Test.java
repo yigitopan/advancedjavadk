@@ -5,33 +5,34 @@ public class Test {
 	public static void main(String[] args) {
 
 		Dog doggy = new Dog();
-		System.out.println(doggy.hareket());
+		System.out.println(doggy.bewegen());
 		Snake snake = new Snake();
-		System.out.println(snake.hareket());
+		System.out.println(snake.bewegen());
 	}
 
-	public static int toplama(int a, int b) {
+	public static int add(int a, int b) {
 		return a+b;
 	}
 	
-	public static int toplama(int a, int b, int c) {
+	public static int add(int a, int b, int c) {
 		return a+b+c;
 	}
 	
-	public static int toplama(String x, int y) {
+	public static int add(String x, int y) {
 		return 0;
 	}
 }
 
 class Animal{
-	public String hareket() {
-		return "hareket ederim.";
+	public String bewegen() {
+		return "Ich bewege mich.";
 	}
 }
 
 class Dog extends Animal{
-	public String hareket() {
-		return "kosarim.";
+	@Override
+	public String bewegen() {
+		return "Ich renne.";
 	}
 }
 

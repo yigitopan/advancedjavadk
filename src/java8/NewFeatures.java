@@ -13,18 +13,22 @@ public class NewFeatures {
 		users.add(new User(2,"Ahmet"));
 		users.add(new User(3,"Zehra"));
 		users.add(new User(4,"Murat"));
-		users.add(new User(5,"Yýldýz"));
+		users.add(new User(5,"Yï¿½ldï¿½z"));
 		users.add(new User(6,"Levent"));
 		users.add(new User(7,"Elvan"));
 		
 		//users.stream().forEach(user -> user.talk());
 		users.stream().forEach(User::talk);//method reference
-		
+
+		////////////////////////
+
 		List<User> filteredList = users.stream().filter(user -> user.id>5)
 				.collect(Collectors.toList());
 		System.out.println("Filtered");
 		filteredList.stream().forEach(User::talk);
-		
+
+		////////////////////////
+
 		List<User> mappedList = users.stream()
 				.map(user -> new User(user.id+100,user.name))
 			    .collect(Collectors.toList());
@@ -35,6 +39,9 @@ public class NewFeatures {
 				.toMap(user -> user.id, user -> user.name));
 		
 		userMap.forEach((key, value) -> System.out.println(key + " : " + value));
+
+		////////////////////////
+
 	}
 
 }
